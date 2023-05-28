@@ -6,20 +6,20 @@
 /*   By: agarijo- <agarijo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 12:17:27 by agarijo-          #+#    #+#             */
-/*   Updated: 2023/05/27 13:45:53 by agarijo-         ###   ########.fr       */
+/*   Updated: 2023/05/28 13:18:40 by agarijo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "client.h"
 
-void	error(void)
+void	ft_error(void)
 {
 	write(2, "error\n", 6);
 	exit(1);
 }
 
-int	printbincharpad(char c, pid_t pid)
+int	printbinofchar(char c, pid_t pid)
 {
 	int	i;
 
@@ -39,7 +39,7 @@ int	printbincharpad(char c, pid_t pid)
 			ft_putchar_fd('0', 1);
 		}
 		i--;
-		usleep(500);
+		usleep(100);
 	}
 	ft_putchar_fd('\n', 1);
 	return (1);
@@ -51,13 +51,14 @@ int	main(int argc, char **argv)
 	pid_t	pid;
 
 	if (argc != 3)
-		error();
+		ft_error();
 	pid = ft_atoi(argv[1]);
 	i = 0;
 	while (argv[2][i])
 	{
-		if (!printbincharpad(argv[2][i], pid))
-			error();
+		if (!printbinofchar(argv[2][i], pid))
+			ft_error();
 		i++;
 	}
+	return (0);
 }
