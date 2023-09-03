@@ -6,7 +6,7 @@
 /*   By: agarijo- <agarijo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 12:22:44 by agarijo-          #+#    #+#             */
-/*   Updated: 2023/05/28 13:18:21 by agarijo-         ###   ########.fr       */
+/*   Updated: 2023/09/03 17:54:57 by agarijo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CLIENT_H
 # include <signal.h>
 
+void	leaks(void);
 void	ft_error(void);
 
 // It's a bit shift operation. For every 1 on the right,

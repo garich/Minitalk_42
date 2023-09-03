@@ -6,7 +6,7 @@
 /*   By: agarijo- <agarijo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 11:05:42 by agarijo-          #+#    #+#             */
-/*   Updated: 2023/05/28 14:01:19 by agarijo-         ###   ########.fr       */
+/*   Updated: 2023/09/03 18:05:51 by agarijo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 #include "server.h"
 
 char	g_c[8];
+
+void	leaks(void)
+{
+	system("leaks -q --list server");
+}
 
 int	power(int base, int exponent)
 {

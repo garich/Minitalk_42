@@ -6,12 +6,17 @@
 /*   By: agarijo- <agarijo-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/27 12:17:27 by agarijo-          #+#    #+#             */
-/*   Updated: 2023/05/28 13:18:40 by agarijo-         ###   ########.fr       */
+/*   Updated: 2023/09/03 18:05:56 by agarijo-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "client.h"
+
+void	leaks(void)
+{
+	system("leaks -q --list client");
+}
 
 void	ft_error(void)
 {
